@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type="text/javascript">
+function calc(sgpa,n)
+{
+	s=0
+	for(i=0;i<n;i++)
+	s=s+sgpa[i]
+	cgpa=s/n
+	function cgpaClosure()
+	{
+		alert("CGPA="+cgpa)
+	}
+	cgpaClosure()
+}
+</script>
+<body>
+<script type="text/javascript">
+var sgpa=new Array(10)
+n=parseInt(prompt("Enter the no. of semesters completed"))
+for(i=0;i<n;i++)
+sgpa[i]=parseFloat(prompt("Enter sgpa of "+(i+1)+"semester"))
+calc(sgpa,n)
+</script>
+</html>	

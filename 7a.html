@@ -1,0 +1,67 @@
+<html>
+<head>
+<script type="text/javascript">
+function deposit(amt)
+{
+	bal=bal+amt;
+	function depClosure()
+	{
+		alert("Balance after depositing Rs."+amt+"="+bal);
+	}
+	depClosure();
+}
+function withdraw(amt)
+{
+	if((bal-amt)<1000)
+	f=1
+	else
+	{
+		bal=bal-amt
+		f=0
+	}
+	function withClosure()
+	{
+		if(f==1)
+		alert("Cannot withdraw (Min balance=Rs.1000)")
+		else
+		alert("Balance after withdrawing Rs."+amt+"="+bal)
+	}
+	withClosure()
+}
+function disp()
+{
+	function dispClosure()
+	{
+		alert("Balance amount=Rs."+bal)
+	}
+	dispClosure()
+}
+</script>
+<body>
+<script type="text/javascript">
+var bal;
+bal=parseInt(prompt("Enter the current balance (must be greater than min bal(Rs.1000))"))
+for(;;)
+{
+ch=parseInt(prompt("Enter 1: DEPOSIT 2: WITHDRAW 3: DISPLAY 4: EXIT"))
+if(ch==1)
+{
+	amt=parseInt(prompt("Enter the amount to be deposited"));
+	deposit(amt)
+}
+if(ch==2)
+{
+	amt=parseInt(prompt("Enter the amount for withdrawal"));
+	withdraw(amt)
+}
+if(ch==3)
+{
+	disp()
+}
+if(ch==4)
+{
+	break;
+}
+}
+</script>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+function inp(sca)
+{
+	i=i+1;
+	sca[i]=prompt("Enter name");
+	if(sca[i]==null)
+		out(sca);
+	else
+		inp(sca);
+}
+function out(sca)
+{
+	sca.sort();
+	for(j=0;j<i;j++)
+	{
+		document.write(sca[j]+" ");
+	//	document.write("<br>");
+	}
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+var i=-1;
+var sca=new Array(10);
+inp(sca);
+</script>
+</body>
+</html>

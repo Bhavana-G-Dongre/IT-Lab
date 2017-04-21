@@ -1,0 +1,44 @@
+<html>
+<body>
+<script>
+function Calci(a,b,ch)
+{
+	this.a=a;
+	this.b=b;
+	this.ch=ch;
+}
+Calci.prototype.display=function(){
+	if(this.ch==1)
+	{
+		res=this.a+this.b;
+		console.log("Result="+res);
+	}
+	if(this.ch==2)
+	{
+		res=this.a-this.b;
+		console.log("Result="+res)
+	}
+	if(this.ch==3)
+	{
+		res=this.a*this.b;
+		console.log("Result="+res)
+	}
+	if(this.ch==4)
+	{
+		if(this.b==0)
+		console.log("Divide by zero erro")
+		else
+		{
+			res=this.a/this.b;
+			console.log("Result="+res)
+		}
+	}
+}
+a=parseInt(prompt("Enter first number"));
+b=parseInt(prompt("Enter second number"));
+ch=parseInt(prompt("Enter 1: ADD, 2: SUB, 3: MUL, 4: DIV"));
+var result=new Calci(a,b,ch);
+result.display();
+</script>
+</body>
+</html>
