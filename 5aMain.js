@@ -1,0 +1,6 @@
+var mod1=require('./5aSquare.js')
+var mod2=require('./5aTriangle.js')
+var mod3=require('./5aCircle.js')
+console.log("Area of square with side %d=%d",2,mod1.areaSq(2))
+console.log("Area of triangle with base %d, height %d =%d",2,4,mod2.areaTri(2,4))
+console.log("Area of circle with radius %d=%d",2,mod3.areaCircle(2))
