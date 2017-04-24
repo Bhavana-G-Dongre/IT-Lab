@@ -9,10 +9,6 @@ app.get('/',function(req,res){
 app.get('/4bindex.html',function(req,res){
 	res.sendFile(__dirname+"/"+"4bindex.html");
 })
-app.get('/process_get',function(req,res){
-	res.send("first:"+req.query['first_name']+"last name:"+req.query['last_name']);
-	
-})
 app.get('/welcome',function(req,res){
 	res.send('<h1>Welcome to MSRIT</h1>');
 })
